@@ -17,3 +17,5 @@ backendyarn-error.log
 backend/.fleet
 backend/.idea
 backend/.vscode
+
+node_modules
