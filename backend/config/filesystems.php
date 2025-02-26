@@ -39,7 +39,7 @@ return [
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
+            'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
             'throw' => false,
         ],
@@ -56,6 +56,30 @@ return [
             'throw' => false,
         ],
 
+        'covers' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/media/covers'),
+            'url' => env('APP_URL') . '/storage/media/covers',
+        ],
+
+        'temp' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/temp'),
+            'visibility' => 'public',
+        ],
+
+        'digitalocean' => [
+            'driver' => 's3',
+            'key' => env('DO_SPACES_KEY'),
+            'secret' => env('DO_SPACES_SECRET'),
+            'region' => env('DO_SPACES_REGION'),
+            'bucket' => env('DO_SPACES_BUCKET'),
+            'cdn_endpoint' => env('DO_SPACES_CDN_ENDPOINT'),
+            'endpoint' => env('DO_SPACES_ENDPOINT'),
+            'url' => env('DO_SPACES_URL'),
+            'disable_asserts' => true,
+            'visibility' => 'public',
+        ]
     ],
 
     /*

@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Development",
+        "children": [
+            {
+                "name": "Web Development"
+            },
+            {
+                "name": "Mobile Apps"
+            },
+            {
+                "name": "Programming Languages"
+            },
+            {
+                "name": "Game Development"
+            },
+            {
+                "name": "Databases"
+            },
+            {
+                "name": "Software Testing"
+            },
+            {
+                "name": "Software Engineering"
+            },
+            {
+                "name": "Development Tools"
+            },
+            {
+                "name": "E-Commerce"
+            }
+        ]
+    },
+    {
+        "name": "Business",
+        "children": [
+            {
+                "name": "Finance"
+            },
+            {
+                "name": "Entrepreneurship"
+            },
+            {
+                "name": "Communications"
+            },
+            {
+                "name": "Management"
+            },
+            {
+                "name": "Sales"
+            },
+            {
+                "name": "Strategy"
+            },
+            {
+                "name": "Operations"
+            },
+            {
+                "name": "Project Management"
+            },
+            {
+                "name": "Business Law"
+            }
+        ]
+    }
+]

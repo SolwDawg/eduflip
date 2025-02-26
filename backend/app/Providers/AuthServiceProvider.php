@@ -7,6 +7,7 @@ use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Auth\Notifications\VerifyEmail;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Str;
 
@@ -18,7 +19,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array<class-string, class-string>
      */
     protected $policies = [
-        //
+        // 'App\Models\Course' => 'App\Policies\CoursePolicy',
     ];
 
     /**
@@ -26,6 +27,11 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+
+        Gate::guessPolicyNamesUsing(function ($modelClass) {
+            return 'App\\Policies\\' . class_basename($modelClass) . 'Policy';
+        });
+
         VerifyEmail::createUrlUsing(function (User $user) {
             $frontendUrl = config('app.frontend_url') . '/email/verify';
             $baseUrl = config('app.url');

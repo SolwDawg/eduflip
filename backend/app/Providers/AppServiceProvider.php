@@ -21,6 +21,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        require app_path('Support/helpers.php');
         JsonResource::withoutWrapping();
         Password::defaults(
             fn() => Password::min(8)
